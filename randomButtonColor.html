@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Background</title>
+    <link rel="stylesheet" type="text/css" href="css/dingugrid1.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<button id="myButton">Random</button>
+	<script>
+			const button = document.getElementById("myButton");
+		function randomNumber(num){
+		return Math.floor(Math.random() * num);
+		}
+		function colourChange(event){
+		const randomColor = 'rgb(' + randomNumber(255) + ',' + randomNumber(255) + ',' + randomNumber(255) + ')';
+
+		event.target.style.backgroundColor = randomColor; }
+		button.onclick = colourChange;
+
+	</script>
+	
+</body>
+</html>
